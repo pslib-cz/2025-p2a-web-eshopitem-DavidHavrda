@@ -1,0 +1,121 @@
+.card__container {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:
+        250px
+        /* 1. Obrázek */
+        auto
+        /* 2. Titulek */
+        auto
+        /* 3. Spec 1 */
+        auto
+        /* 4. Spec 2 */
+        auto
+        /* 5. Spec 3 */
+        auto
+        /* 6. Spec 4 */
+        auto
+        /* 7. Spec 5 */
+        auto
+        /* 8. Extra (zelený box) */
+        10px
+        /* 8.5 Sleva*/
+        auto
+        /* 9. Cena a sklad */
+        auto;
+    /* 10. Footer (tlačítka) */
+    gap: 2px;
+}
+
+
+.card {
+    display: grid;
+    grid-row: span 11;
+    grid-template-rows: subgrid;
+    background: white;
+    padding: 15px;
+}
+
+.card__header {
+    grid-row: 1 / span 2;
+    /* Začni na 1. řádku a zaber 2 (Obrázek + Titulek) */
+    display: grid;
+    grid-template-rows: subgrid;
+}
+
+.card__body {
+    grid-row: 3 / span 8;
+    /* Začni na 3. řádku a zaber zbytek pro Specs atd. */
+    display: grid;
+    grid-template-rows: subgrid;
+}
+
+.card__footer {
+    display: flex;
+    grid-row: span 1;
+    justify-content: space-between;
+    grid-template-rows: subgrid;
+}
+
+.card__specs {
+    display: grid;
+    grid-template-rows: subgrid;
+
+    grid-row: 1/span 5;
+
+    gap: 8px;
+}
+
+.spec-row {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+
+}
+
+.card__image {
+    width: 100%;
+    height: 100%;
+}
+
+.card__title {}
+
+.card__tag {}
+
+.card__extra {
+    grid-row: 6/span 1;
+    justify-self: center;
+    background-color: white;
+    height: fit-content;
+    border: 2px solid lightgreen;
+    border-radius: 10px;
+}
+
+.card__sale {
+    text-align: end;
+}
+
+.card__info {
+    grid-row: 8/span 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__info--item {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__button {
+    background-color: lightgreen;
+    text-decoration: none;
+    color: white;
+}
+
+.sale {
+    margin: 0;
+}
