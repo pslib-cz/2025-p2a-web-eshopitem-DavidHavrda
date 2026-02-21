@@ -13,8 +13,9 @@ body {
     display: grid;
     max-width: 1440px;
     grid-template-columns: repeat(3, 1fr);
+
     grid-template-rows:
-        fit-content
+        300px
         /* 1. Obrázek */
         auto
         /* 2. Titulek */
@@ -47,6 +48,7 @@ body {
     grid-template-rows: subgrid;
     background: white;
     transform: translate(0, 0);
+    border: 1px solid lightgray;
 }
 
 
@@ -59,7 +61,7 @@ body {
 
 .card__body {
     grid-row: 3 / span 8;
-    padding: 0 1em;
+    padding: 1em;
     display: grid;
     grid-template-rows: subgrid;
 }
@@ -71,8 +73,9 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #ebebeb;
-    padding: 1rem;
-    margin: 1em;
+    padding: 1em;
+    margin: 0 1em;
+    margin-bottom: 1em;
 }
 
 .card__specs {
@@ -191,6 +194,8 @@ body {
     grid-row: 8/span 1;
     display: flex;
     justify-content: space-between;
+    margin-top: .5em;
+
 }
 
 .card__info--item {
