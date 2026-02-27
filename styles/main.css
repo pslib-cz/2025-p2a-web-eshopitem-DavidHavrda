@@ -9,33 +9,11 @@ body {
 .card__container {
     margin-top: 5em;
     display: grid;
-    max-width: 1200px;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 0.5fr));
     padding-right: 1em;
     padding-left: 1em;
-    grid-template-rows:
-        auto
-        /* 1. Obrázek */
-        auto
-        /* 2. Titulek */
-        auto
-        /* 3. Spec 1 */
-        auto
-        /* 4. Spec 2 */
-        auto
-        /* 5. Spec 3 */
-        auto
-        /* 6. Spec 4 */
-        auto
-        /* 7. Spec 5 */
-        auto
-        /* 8. Extra (zelený box) */
-        auto
-        /* 8.5 Sleva*/
-        auto
-        /* 9. Cena a sklad */
-        auto;
-    /* 10. Footer (tlačítka) */
+    grid-template-rows: repeat(11, auto);
     gap: 2px;
     column-gap: 0;
 }
@@ -103,8 +81,6 @@ body {
     max-height: 300px;
     object-fit: contain;
     display: block;
-    align-items: center;
-    justify-content: center;
 
 }
 
@@ -122,8 +98,10 @@ body {
 
 
 .image-wrapper {
+    justify-self: center;
     grid-row: 1;
-
+    height: 200px;
+    width: 80%;
     padding: 2rem;
 }
 
@@ -172,6 +150,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .gifticon {
@@ -191,8 +170,8 @@ body {
     grid-row: 8/span 1;
     display: flex;
     justify-content: space-between;
-    margin-top: .5em;
 
+    height: fit-content;
 }
 
 .card__info--item {
