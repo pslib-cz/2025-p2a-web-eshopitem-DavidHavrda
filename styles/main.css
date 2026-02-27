@@ -7,15 +7,14 @@ body {
 
 
 .card__container {
-    justify-self: center;
     margin-top: 5em;
-    position: relative;
     display: grid;
-    max-width: 1440px;
-    grid-template-columns: repeat(3, 1fr);
-
+    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+    padding-right: 1em;
+    padding-left: 1em;
     grid-template-rows:
-        300px
+        auto
         /* 1. Obrázek */
         auto
         /* 2. Titulek */
@@ -31,19 +30,20 @@ body {
         /* 7. Spec 5 */
         auto
         /* 8. Extra (zelený box) */
-        10px
+        auto
         /* 8.5 Sleva*/
         auto
         /* 9. Cena a sklad */
         auto;
     /* 10. Footer (tlačítka) */
     gap: 2px;
-    column-gap: 2rem;
+    column-gap: 0;
 }
 
 
 .card {
     display: grid;
+    position: relative;
     grid-row: span 11;
     grid-template-rows: subgrid;
     background: white;
@@ -54,7 +54,7 @@ body {
 
 .card__header {
     grid-row: 1 / span 2;
-
+    max-height: 300px;
     display: grid;
     grid-template-rows: subgrid;
 }
@@ -98,14 +98,11 @@ body {
 }
 
 .card__image {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
     width: 100%;
-    aspect-ratio: 1 / 1;
-    display: flex;
+    height: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    display: block;
     align-items: center;
     justify-content: center;
 
@@ -261,5 +258,4 @@ body {
 .striked,
 .label {
     color: #757575;
-    /* Solidní standard */
 }
