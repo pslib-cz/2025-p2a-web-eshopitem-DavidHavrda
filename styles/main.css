@@ -29,6 +29,10 @@ body {
     border: 1px solid lightgray;
 }
 
+.card:hover {
+    transform: scale(1.05);
+    z-index: 100;
+}
 
 .card__header {
     grid-row: 1 / span 2;
